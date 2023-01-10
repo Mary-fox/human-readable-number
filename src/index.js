@@ -20,15 +20,13 @@ function writeNumberFrom100(number) {
 }
 //проверяем остаток в сотнях после деленния на 100
 function writeHundreds(number) {
-  number = number % 100
-  writeNumberToUp99(number)
-  return writeNumberToUp99(number)
+  return writeNumberToUp99(number % 100)
 }
 
 if (number >=0 && number <= 99) {
-  return writeNumberToUp99(number);
+   return writeNumberToUp99(number);
 } else if (number >= 100) {
-  return writeNumberFrom100(number);
+   return writeNumberFrom100(number);
 }
 
 }
