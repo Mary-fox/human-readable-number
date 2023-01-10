@@ -15,12 +15,8 @@ function writeNumberFrom100(number) {
   if (number % 100 === 0) {
     return hundreds[number/100];
   }else {
-    return hundreds[Math.floor(number / 100)] +  ' ' + writeHundreds(number)
+    return hundreds[Math.floor(number / 100)] +  ' ' + writeNumberToUp99(number % 100)
 }
-}
-//проверяем остаток в сотнях после деленния на 100
-function writeHundreds(number) {
-  return writeNumberToUp99(number % 100)
 }
 
 if (number >=0 && number <= 99) {
